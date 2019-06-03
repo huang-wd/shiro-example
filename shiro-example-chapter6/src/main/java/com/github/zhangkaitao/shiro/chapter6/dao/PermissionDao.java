@@ -9,8 +9,8 @@ import com.github.zhangkaitao.shiro.chapter6.entity.Permission;
  */
 public interface PermissionDao {
 
-    public Permission createPermission(Permission permission);
+    Permission createPermission(Permission permission);
 
-    public void deletePermission(Long permissionId);
+    void deletePermission(Long permissionId);
 
 }

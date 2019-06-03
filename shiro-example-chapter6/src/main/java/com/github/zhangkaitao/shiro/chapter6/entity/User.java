@@ -1,6 +1,7 @@
 package com.github.zhangkaitao.shiro.chapter6.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * <p>User: Zhang Kaitao
@@ -69,14 +70,17 @@ public class User implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         User user = (User) o;
 
-        if (id != null ? !id.equals(user.id) : user.id != null) return false;
+        return Objects.equals(id, user.id);
 
-        return true;
     }
 
     @Override

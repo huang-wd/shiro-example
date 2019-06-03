@@ -8,6 +8,9 @@ import com.github.zhangkaitao.shiro.chapter6.entity.Permission;
  * <p>Version: 1.0
  */
 public interface PermissionService {
-    public Permission createPermission(Permission permission);
-    public void deletePermission(Long permissionId);
+
+    Permission createPermission(Permission permission);
+
+    void deletePermission(Long permissionId);
+
 }

@@ -1,6 +1,7 @@
 package com.github.zhangkaitao.shiro.chapter6.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * 用户角色关系
@@ -11,6 +12,7 @@ import java.io.Serializable;
 public class RolePermssion implements Serializable {
 
     private Long roleId;
+
     private Long permissionId;
 
     public Long getRoleId() {
@@ -31,15 +33,21 @@ public class RolePermssion implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         RolePermssion that = (RolePermssion) o;
 
-        if (permissionId != null ? !permissionId.equals(that.permissionId) : that.permissionId != null) return false;
-        if (roleId != null ? !roleId.equals(that.roleId) : that.roleId != null) return false;
+        if (!Objects.equals(permissionId, that.permissionId)) {
+            return false;
+        }
 
-        return true;
+        return Objects.equals(roleId, that.roleId);
+
     }
 
     @Override

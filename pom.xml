@@ -8,6 +8,17 @@
     <artifactId>shiro-example</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <main.java.version>1.8</main.java.version>
+        <main.signature.artifact>java18</main.signature.artifact>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    
     <modules>
         <module>shiro-example-chapter2</module>
         <module>shiro-example-chapter3</module>

@@ -15,8 +15,8 @@ import java.util.Collection;
 public class MyRolePermissionResolver implements RolePermissionResolver {
     @Override
     public Collection<Permission> resolvePermissionsInRole(String roleString) {
-        if("role1".equals(roleString)) {
-            return Arrays.asList((Permission)new WildcardPermission("menu:*"));
+        if ("role1".equals(roleString)) {
+            return Arrays.asList((Permission) new WildcardPermission("menu:*"));
         }
         return null;
     }

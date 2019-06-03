@@ -9,10 +9,12 @@ import com.github.zhangkaitao.shiro.chapter6.entity.Role;
  */
 public interface RoleDao {
 
-    public Role createRole(Role role);
-    public void deleteRole(Long roleId);
+    Role createRole(Role role);
 
-    public void correlationPermissions(Long roleId, Long... permissionIds);
-    public void uncorrelationPermissions(Long roleId, Long... permissionIds);
+    void deleteRole(Long roleId);
+
+    void correlationPermissions(Long roleId, Long... permissionIds);
+
+    void unCorrelationPermissions(Long roleId, Long... permissionIds);
 
 }

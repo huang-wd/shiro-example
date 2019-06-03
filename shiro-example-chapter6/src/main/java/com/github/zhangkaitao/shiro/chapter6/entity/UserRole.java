@@ -1,6 +1,7 @@
 package com.github.zhangkaitao.shiro.chapter6.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * 用户角色关系
@@ -31,15 +32,20 @@ public class UserRole implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         UserRole userRole = (UserRole) o;
 
-        if (roleId != null ? !roleId.equals(userRole.roleId) : userRole.roleId != null) return false;
-        if (userId != null ? !userId.equals(userRole.userId) : userRole.userId != null) return false;
+        if (!Objects.equals(roleId, userRole.roleId)) {
+            return false;
+        }
+        return Objects.equals(userId, userRole.userId);
 
-        return true;
     }
 
     @Override
